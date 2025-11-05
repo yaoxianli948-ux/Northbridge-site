@@ -219,7 +219,97 @@ section {
       </div>
     </div>
   </section>
+<!-- ===== Custom Quote Section ===== -->
+<section id="quote">
+  <h2>Get a Custom Quote</h2>
+  <p style="text-align:center;color:var(--muted);max-width:760px;margin:0 auto 26px;">
+    Tell us about your project. You’ll see a live starting estimate below. We’ll reply by email with a tailored quote.
+  </p >
 
+  <!-- 把 action 改成你的 Formspree 表单地址 -->
+  <form action="https://formspree.io/f/你的ID" method="POST"
+        style="max-width:720px;margin:0 auto;text-align:left;background:var(--card);border:1px solid rgba(255,255,255,0.08);padding:22px;border-radius:var(--radius);box-shadow:var(--shadow);">
+
+    <!-- 联系方式 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+      <label> Name
+        <input type="text" name="name" required
+               style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.08);margin-top:6px;background:#0f1116;color:#fff;">
+      </label>
+      <label> Email
+        <input type="email" name="_replyto" required
+               style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.08);margin-top:6px;background:#0f1116;color:#fff;">
+      </label>
+    </div>
+
+    <!-- 基本信息 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;">
+      <label> Project type
+        <select name="project_type" required
+                style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.08);margin-top:6px;background:#0f1116;color:#fff;">
+          <option value="academic">Academic Editing</option>
+          <option value="business">Business Writing</option>
+          <option value="visual">Visual / Slides</option>
+        </select>
+      </label>
+
+      <label> Deadline
+        <input type="date" name="deadline" required
+               style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.08);margin-top:6px;background:#0f1116;color:#fff;">
+      </label>
+    </div>
+
+    <!-- 数量 / 紧急程度 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;">
+      <label> Word count / Pages / Slides
+        <input type="number" name="units" min="1" placeholder="e.g. 1200 / 4 / 10" required
+               style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.08);margin-top:6px;background:#0f1116;color:#fff;">
+      </label>
+
+      <label> Urgency
+        <select name="urgency"
+                style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.08);margin-top:6px;background:#0f1116;color:#fff;">
+          <option value="standard">Standard (72h)</option>
+          <option value="express">Express (48h)</option>
+          <option value="priority">Priority (24h)</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- 预算 / 电话 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;">
+      <label> Budget range (optional)
+        <select name="budget"
+                style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.08);margin-top:6px;background:#0f1116;color:#fff;">
+          <option value="undisclosed">Undisclosed</option>
+          <option value="under50">Under £50</option>
+          <option value="50-150">£50–£150</option>
+          <option value="150-400">£150–£400</option>
+          <option value="400plus">£400+</option>
+        </select>
+      </label>
+      <label> Phone (optional)
+        <input type="tel" name="phone" placeholder="+44 ..."
+               style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.08);margin-top:6px;background:#0f1116;color:#fff;">
+      </label>
+    </div>
+
+    <label style="display:block;margin-top:14px;"> Brief / Notes
+      <textarea name="message" required placeholder="Goal, audience, must-have points, style reference…"
+                style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.08);margin-top:6px;background:#0f1116;color:#fff;min-height:120px;"></textarea>
+    </label>
+
+    <div style="display:flex;justify-content:flex-end;margin-top:16px;">
+      <button type="submit"
+              style="background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;padding:12px 24px;border-radius:999px;font-weight:700;color:#0f1116;cursor:pointer;">
+        Send Request
+      </button>
+    </div>
+
+    <!-- 方便你在邮件里识别来源 -->
+    <input type="hidden" name="form_source" value="quote-section">
+  </form>
+</section>
   <section id="contact" class="contact">
     <h2>Contact</h2>
     <p>Let's create something meaningful together.</p>
