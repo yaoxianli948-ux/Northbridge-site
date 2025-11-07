@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script 
+  src="https://www.paypal.com/sdk/js?client-id=BAAHnEZIQtpEndvd6GXAQi-iHtcxKk4gr-dfTrDQ8Q8BQIUmO79ycfc5UrV9b7OYcFAh5dXSQ7Wk4vVK0M&components=hosted-buttons&disable-funding=venmo&currency=GBP">
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Northbridge Studio — Clarity. Structure. Impact.</title>
@@ -305,7 +307,12 @@ section {
         Send Request
       </button>
     </div>
-
+<div id="paypal-container-5HVJU9W5M5SWY"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "5HVJU9W5M5SWY",
+  }).render("#paypal-container-5HVJU9W5M5SWY")
+</script>
     <!-- 方便你在邮件里识别来源 -->
     <input type="hidden" name="form_source" value="quote-section">
   </form>
